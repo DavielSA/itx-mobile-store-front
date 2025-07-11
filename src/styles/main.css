@@ -1,0 +1,194 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  color: #333;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0b5ed7;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #f0f0f0;
+  border-color: #888;
+}
+
+.add-to-cart-btn {
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #3b82f6;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Headers */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.125rem; /* 18px */
+  text-decoration: none;
+  color: black;
+}
+
+.logo:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb {
+  margin-left: 1rem;
+  font-size: 0.875rem; /* 14px */
+  color: #6b7280; /* gris */
+}
+
+.cart-button {
+  background: none;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2563eb; /* azul */
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+
+/* cart modal  */
+.modal-backdrop {
+  position: fixed;
+  inset: 0; /* top:0; bottom:0; left:0; right:0; */
+  background-color: rgba(0,0,0,0.4);
+  z-index: 50;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 1.5rem;
+  max-width: 400px;
+  width: 90vw;
+  max-height: 60vh;
+  overflow-y: auto;
+  z-index: 51;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.modal-empty {
+  color: #777;
+}
+
+.modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 15rem;
+  overflow-y: auto;
+  gap: 0.5rem;
+}
+
+.modal-list-item {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
